@@ -1,0 +1,118 @@
+%page__margin {
+  padding: 80px 0;
+  transition: .24s ease;
+
+  @media (--md) {
+    padding: 140px 0;
+  }
+
+  @media (--lg) {
+    padding: 90px 0;
+  }
+}
+
+%section___margin {
+  margin: 30px 0;
+
+  @media (--sm) {
+    margin: 60px 0;
+  }
+
+  @media (--md) {
+    margin: 100px 0;
+  }
+}
+
+%section___padding {
+  padding: 30px 0;
+
+  @media (--sm) {
+    padding: 60px 0;
+  }
+
+  @media (--md) {
+    padding: 100px 0;
+  }
+}
+
+.works-archive {
+  background: #efefef;
+}
+
+.about-company {
+  background: #efefef;
+
+  .about-company-lead {
+    margin-bottom: 30px;
+    font-family: $font-serif;
+  }
+}
+
+.works-single {
+  @extend %page__margin;
+
+  .works-header__time {
+    display: block;
+    margin-top: 25px;
+    font-family: $font-en;
+    color: $color-grey;
+    font-size: 12px;
+    line-height: 1;
+
+    @media (--md) {
+      margin-top: 40px;
+    }
+  }
+
+  .works-header__heading {
+    @include fz(20);
+
+    margin: 10px 0 20px;
+    font-family: $font-serif;
+    letter-spacing: .01em;
+
+    @media (--md) {
+      margin: 15px 0 20px;
+    }
+  }
+
+  .c-paging {
+    margin-top: 40px;
+  }
+}
+
+.single-works {
+  .c-visual {
+    display: none;
+  }
+}
+
+.home {
+  .header-menu {
+    opacity: 0;
+    animation: loadfadeIn 1.4s ease 3s forwards;
+  }
+}
+
+.post-type-archive-works {
+  .works-archive {
+    @extend %page__margin;
+
+    background: #efefef;
+  }
+}
+
+.wp-pagenavi {
+  display: none;
+}
+
+.error-404 {
+  .c-backbtn {
+    margin: 30px 0 15px;
+  }
+
+  p {
+    margin-bottom: 60px;
+    font-family: $font-serif;
+  }
+}

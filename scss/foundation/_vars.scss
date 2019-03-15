@@ -1,0 +1,66 @@
+// color
+$color-black: #000;
+$color-white: #fff;
+$color-grey: #777;
+$color-main: #000;
+$color-main-light: #f6f7ec;
+
+// font-family
+@font-face {
+  font-family: 'Basilia';
+  src: url('../font/Basilia-Reg.ttf') format('truetype'), url('../font/Basilia-Reg.woff') format('woff');
+}
+
+// font-family
+$font-sans: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', YuGothic, 'Yu Gothic', 'メイリオ', Meiryo,'ＭＳ ゴシック', sans-serif;
+$font-serif: 游明朝, "Yu Mincho", YuMincho, "Hiragino Mincho ProN", HGS明朝E, メイリオ, Meiryo, serif;
+$font-en: 'Basilia', sans-serif;
+
+//bp min
+@custom-media --xs (min-width: 425px);
+@custom-media --sm (min-width: 554px);
+@custom-media --md (min-width: 768px);
+@custom-media --lg (min-width: 992px);
+@custom-media --xl (min-width: 1200px);
+
+//bp max
+@custom-media --xs_max (max-width: 424px);
+@custom-media --sm_max (max-width: 553px);
+@custom-media --md_max (max-width: 767px);
+@custom-media --lg_max (max-width: 991px);
+@custom-media --xl_max (max-width: 1199px);
+
+//fz
+@function get_vw($size, $viewport: 400) {
+  $rate: 100 / $viewport;
+
+  @return $rate * $size * 1vw;
+}
+
+@mixin fz($font_size: 10) {
+  font-size: get_vw($font_size);
+
+  @media (--sm) {
+    font-size: $font_size - 2px;
+  }
+
+  @media (--md) {
+    font-size: $font_size * 1px;
+  }
+}
+
+//font-justify
+%justify {
+  text-align: justify;
+  text-justify: inter-ideograph;
+}
+
+//hover
+%hover-effect_opacity {
+  transition: .4s ease;
+
+  &:hover {
+    opacity: .5;
+    transition: .4s ease;
+  }
+}

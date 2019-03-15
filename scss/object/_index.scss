@@ -1,0 +1,11 @@
+.index-post {
+  background: #efefef;
+}
+
+.index-post__container {
+  padding: 10% 5%;
+
+  @media (--md) {
+    padding: 35px 8%;
+  }
+}
