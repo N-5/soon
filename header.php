@@ -64,10 +64,10 @@
       <div class="c-visual">
         <div class="c-visual-overlay"></div>
         <div class="c-visual__inner">
-          <div class="c-visual-logo"><?php echo do_shortcode('[bodymovin anim_id="99" align="left"]'); ?></div>
-          
+          <div class="c-visual-logo"><div id="logosvg"></div></div>
+
           <?php if ( is_home() || is_front_page() ) : ?>
-            <div class="c-visual-text">A publication on creativity &amp; connected culture.</div>
+          <div class="c-visual-text">A publication on creativity &amp; connected culture.</div>
           <?php endif; ?>
           <?php if(is_page('about')): ?>
           <div class="c-visual-heading">About</div>
